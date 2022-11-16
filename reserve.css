@@ -1,0 +1,580 @@
+@charset "utf-8";
+
+html {
+    scroll-behavior: smooth;
+}
+
+.inner {
+    max-width: 1040px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+}
+
+.hd-area {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+}
+
+.hd-title {
+    font-family: 'Oswald', sans-serif;
+    padding-left: 40px;
+    padding-right: 16px;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+}
+
+.hd-list {
+    display: flex;
+    font-family: 'Manrope', sans-serif;
+    padding-left: 16px;
+}
+
+.hd-list li {
+    font-weight: 300;
+}
+
+.hd-list a {
+    padding: 4px 8px;
+    margin: 0 4px;
+    letter-spacing: 0.3em;
+    position: relative;
+}
+
+.hd-list a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: rgb(255, 255, 255);
+    transition: 0.6s;
+}
+
+.hd-list a:hover::after {
+    width: 100%;
+}
+
+.scroll-hd-list a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: -0.15rem;
+    height: 1px;
+    width: 0;
+    background-color: rgb(0, 0, 0);
+    transition: 0.6s;
+}
+
+.scroll-hd-list a:hover::after {
+    width: 100%;
+}
+
+.scroll-hd {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    height: 100px;
+    align-items: center;
+    width: 100%;
+}
+
+.scroll-hd.open {
+    display: flex;
+    animation: hdDown 0.6s ease forwards;
+}
+
+.scroll-hd.close {
+    animation: hdUp 1s ease forwards;
+    display: flex;
+}
+
+@keyframes hdUp {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes hdDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.scroll-hd-list li {
+    text-shadow: none;
+}
+
+.sp-hd {
+    cursor: pointer;
+}
+
+.open-hd {
+    position: fixed;
+    top: 0;
+    right: -120%;
+    width: 100vw;
+    height: 100vh;
+    padding: 32px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.6s;
+    z-index: 99;
+}
+
+.open-hd.swich {
+    right: 0;
+}
+
+@keyframes fadeAnime {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.open-hd::after {
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    content: "";
+    position: fixed;
+    top: 5vw;
+    right: 5vw;
+    background-color: #fff;
+    transition: 0.8s;
+    z-index: -1;
+    opacity: 1;
+    right: -50px;
+}
+
+.open-hd.swich::after {
+    padding: 16px;
+    transform: scale(800);
+    opacity: 1;
+    right: 0;
+}
+
+.open-title {
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 10vh;
+}
+
+.open-title.swich {
+    animation-name: fadeAnime;
+    animation-duration: 1.2s;
+}
+
+.open-list {
+    font-family: 'Manrope', sans-serif;
+    margin-top: 32px;
+}
+
+.open-list.swich {
+    animation-name: fadeAnime;
+    animation-duration: 1.5s;
+}
+
+.open-list li {
+    padding: 4vh 8vh 2vh 0;
+    text-align: right;
+    border-bottom: 1px solid black;
+    margin-left: 20vw;
+}
+
+.open-list a {
+    padding: 8px;
+}
+
+/* ハンバーガーのボタン test */
+
+.plate {
+    height: 41px;
+    width: 41px;
+}
+
+.sp-hd svg {
+    position: absolute;
+    top: 30px;
+    right: 5vw;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.x {
+    transform: scale(0);
+    transition: transform 400ms;
+    border-radius: 15px;
+}
+
+.line {
+    fill: none;
+    stroke: rgb(0, 0, 0);
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: 50%;
+    transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms,
+        transform 500ms 200ms;
+}
+
+.x .line {
+    stroke-width: 5.5px;
+}
+
+.plate1 .line2 {
+    stroke-dasharray: 40 200;
+    stroke-dashoffset: 0px;
+}
+
+.plate1 .line3 {
+    stroke-dasharray: 40 179;
+    stroke-dashoffset: 0px;
+}
+
+.swich .line {
+    transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+}
+
+.swich.plate1 .line1 {
+    transform: scale(0, 1);
+    transition: transform 500ms 100ms;
+}
+
+.swich.plate1 .line2 {
+    stroke-dasharray: 5px 200;
+    stroke-dashoffset: -164px;
+}
+
+.swich.plate1 .line3 {
+    stroke-dasharray: 5px 179;
+    stroke-dashoffset: -142px;
+}
+
+.swich .x {
+    transform: scale(1);
+    transition: transform 400ms 350ms;
+}
+
+.top-wrapper {
+    position: relative;
+    margin-top: 100px;
+}
+
+.top-img {
+    width: 100%;
+}
+
+.pc-img {
+    width: 100%;
+}
+
+.sp-img {
+    display: none;
+}
+
+.top-title {
+    position: absolute;
+    top: 50%;
+    left: 3vw;
+    transform: translateY(-50%);
+    padding: 16px;
+}
+
+.top-title h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 2em;
+}
+
+.top-title p {
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 80%;
+    border-radius: 40px;
+    margin: 0 auto;
+    background-color: rgba(128, 128, 128, 0.15);
+    padding: 8px 4px;
+    font-size: 0.85rem;
+}
+
+.top-title a {
+    text-decoration: underline;
+}
+
+.menu-area {
+    margin-top: 120px;
+    padding-bottom: 80px;
+}
+
+.menu-title {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.1em;
+}
+
+.menu-sentence {
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.menu-list li {
+    width: 100%;
+    border-bottom: 1px solid black;
+    line-height: 1.5rem;
+    padding: 4px;
+}
+
+.menu-list a {
+    display: block;
+    transition: 0.5s;
+    padding: 16px;
+}
+
+.menu-list a:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.menu-prize {
+    width: 100%;
+    text-align: right;
+}
+
+.time-area {
+    padding-top: 120px;
+    margin-bottom: 80px;
+}
+
+.time-title {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.1em;
+}
+
+.time-sentence {
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.time-sentence p {
+    padding: 16px;
+}
+
+.time-sentence br {
+    display: none;
+}
+
+.contact-item {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.contact-item input {
+    width: 100%;
+    line-height: 1.8rem;
+    padding: 12px;
+    border: 2px solid gray;
+}
+
+.contact-item textarea {
+    width: 100%;
+    line-height: 1.8rem;
+    padding: 12px;
+    border: 2px solid gray;
+}
+
+::placeholder {
+    color: rgb(117, 117, 117);
+}
+
+.contact-button {
+    text-align: center;
+}
+
+.contact-button button {
+    padding: 12px 64px;
+    border: 2px solid gray;
+}
+
+footer {
+    height: calc(100vh - 100px);
+    padding: 15vh 56px 20vh;
+}
+
+.ft-upper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70%;
+}
+
+.ft-title h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.85rem;
+}
+
+.ft-address p {
+    font-size: 0.8rem;
+    color: #818181;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 0.15em;
+    line-height: 1.65em;
+    font-weight: 600;
+}
+
+.ft-lower {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.ft-list {
+    display: flex;
+}
+
+.copyright {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.85rem;
+    color: #818181;
+    letter-spacing: 0.05rem;
+}
+
+.ft-list a {
+    padding: 8px 24px;
+    letter-spacing: 0.15rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.85rem;
+    color: #000000;
+    font-weight: 600;
+}
+
+.ft-jp {
+    font-weight: 100 !important;
+}
+
+@media screen and (max-width : 1024px) {
+    .hd-list {
+        display: none;
+    }
+
+    .scroll-hd.open {
+        display: none;
+    }
+
+    .scroll-hd {
+        display: none;
+    }
+
+    .scroll-hd.close {
+        display: none;
+    }
+
+    .pc-img {
+        width: 100%;
+        display: none;
+    }
+    
+    .sp-img {
+        width: 100%;
+        display: block;
+    }
+
+    footer {
+        height: 100vh;
+        padding: 10vh 24px 8vh;
+    }
+
+    .ft-upper {
+        display: block;
+    }
+
+    .ft-address p {
+        margin-top: 5vh;
+    }
+
+    .ft-list {
+        display: block;
+        text-align: right;
+        padding-bottom: 5vh;
+    }
+
+    .ft-list a {
+        display: block;
+        padding: 12px 0;
+        letter-spacing: 0.35em;
+    }
+
+    .ft-lower {
+        flex-direction: column-reverse;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width : 600px) {
+
+    .contact-item {
+        width: 100%;
+    }
+
+    .menu-list p {
+        font-size: 0.9rem;
+    }
+
+    .time-sentence br {
+        display: block;
+    }
+
+    
+}

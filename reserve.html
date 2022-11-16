@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reserve.css">
+    <link rel="stylesheet" href="reset.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- datepicker -->
+    <!-- datapicker用 jquery Ui CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <!-- datapicker用 jquery ui js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- datapicker用 日本語 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+
+    <!-- サイト名 -->
+    <title>Hunter.</title>
+</head>
+
+<body id="top">
+    <header>
+        <div class="hd-area">
+            <a href="#top" class="hd-title">
+                <h2>Hunter.</h2>
+            </a>
+            <nav>
+                <ul class="hd-list">
+                    <li><a href="./index.html#concept">CONCEPT</a></li>
+                    <li><a href="./index.html#survice">SURVICE</a></li>
+                    <li><a href="./index.html#greeting">GREETING</a></li>
+                    <li><a href="./index.html#voice">VOICE</a></li>
+                    <li><a href="./index.html#blog">BLOG</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="scroll-hd">
+            <a href="#top" class="scroll-hd-title hd-title">
+                <h2>Hunter.</h2>
+            </a>
+            <nav>
+                <ul class="scroll-hd-list hd-list">
+                    <li><a href="./index.html#concept">CONCEPT</a></li>
+                    <li><a href="./index.html#survice">SURVICE</a></li>
+                    <li><a href="./index.html#greeting">GREETING</a></li>
+                    <li><a href="./index.html#voice">VOICE</a></li>
+                    <li><a href="./index.html#blog">BLOG</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sp-hd">
+            <div class="hamburger">
+                <!-- onclick="this.classList.toggle('swich')" -->
+                <div class="plate plate1">
+                    <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                        <path class="line line1" d="M 30,65 H 70" />
+                        <path class="line line2"
+                            d="M 70,50 H 30 C 30,50 18.644068,50.320751 18.644068,36.016949 C 18.644068,21.712696 24.988973,6.5812347 38.79661,11.016949 C 52.604247,15.452663 46.423729,62.711864 46.423729,62.711864 L 50.423729,49.152542 L 50.423729,16.101695" />
+                        <path class="line line3"
+                            d="M 30,35 H 70 C 70,35 80.084746,36.737688 80.084746,25.423729 C 80.084746,19.599612 75.882239,9.3123528 64.711864,13.559322 C 53.541489,17.806291 54.423729,62.711864 54.423729,62.711864 L 50.423729,49.152542 V 16.101695" />
+                    </svg>
+                    <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                        <path class="line" d="M 34,32 L 66,68" />
+                        <path class="line" d="M 66,32 L 34,68" />
+                    </svg>
+                </div>
+            </div>
+            <div class="open-hd">
+                <a href="#top" class="open-title">
+                    <h2>Hunter.</h2>
+                </a>
+                <nav class="open-nav">
+                    <ul class="open-list">
+                        <li><a href="./index.html#concept">CONCEPT</a></li>
+                        <li><a href="./index.html#survice">SURVICE</a></li>
+                        <li><a href="./index.html#greeting">GREETING</a></li>
+                        <li><a href="./index.html#voice">VOICE</a></li>
+                        <li><a href="./index.html#blog">BLOG</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="top-wrapper">
+            <div class="top-img">
+                <img class="pc-img" src="./images/organicplus.png" alt="">
+                <img class="sp-img" src="./images/organic.png" alt="">
+            </div>
+            <div class="top-title">
+                <h2>RESERVE</h2>
+                <p><a href="./index.html">HOME</a> / RESERVE</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="inner">
+                <section id="menu" class="menu-area">
+                    <div class="menu-title">
+                        <h3>STEP1.MENU</h3>
+                    </div>
+                    <div class="menu-sentence">
+                        <p>メニューを選択してください</p>
+                    </div>
+                    <div class="menu-container">
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#time">
+                                    <div class="menu-name">
+                                        <p>
+                                            カット＋アディクシーorイルミナカラー＋ハホニコトリートメント
+                                        </p>
+                                    </div>
+                                    <div class="menu-prize">
+                                        <p>
+                                            ¥10,500
+                                        </p>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>
+                                            クーポン条件：☆全てのお客様
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#time">
+                                    <div class="menu-name">
+                                        <p>
+                                            【人気No.1】カット＋ハホニコツヤカラー
+                                        </p>
+                                    </div>
+                                    <div class="menu-prize">
+                                        <p>
+                                            ¥5,400
+                                        </p>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>
+                                            クーポン条件：☆全てのお客様
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#time">
+                                    <div class="menu-name">
+                                        <p>
+                                            【人気No.3】カット+オーガニックフルカラー+クイックトリートメント
+                                        </p>
+                                    </div>
+                                    <div class="menu-prize">
+                                        <p>
+                                            ¥6,900
+                                        </p>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>
+                                            クーポン条件：☆全てのお客様
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#time">
+                                    <div class="menu-name">
+                                        <p>
+                                            【髪質改善】カット＋髪質改善トリートメント
+                                        </p>
+                                    </div>
+                                    <div class="menu-prize">
+                                        <p>
+                                            ¥8,500
+                                        </p>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>
+                                            クーポン条件：☆ご新規様限定
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#time">
+                                    <div class="menu-name">
+                                        <p>
+                                            カラー+髪質改善トリートメント
+                                        </p>
+                                    </div>
+                                    <div class="menu-prize">
+                                        <p>
+                                            ¥10,300
+                                        </p>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>
+                                            クーポン条件：☆ご新規様限定
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="time" class="time-area">
+                    <div class="time-title">
+                        <h3>STEP2.SCHEDULE</h3>
+                    </div>
+                    <div class="time-sentence">
+                        <p>情報の入力をお願いいたします</p>
+                        <p>こちらからメールにて<br>折り返しご連絡させて頂きます</p>
+                    </div>
+                    <form class="contact-form">
+                        <div class="contact-item">
+                            <input type="text" placeholder="お名前">
+                        </div>
+                        <div class="contact-item">
+                            <input type="text" placeholder="メールアドレス">
+                        </div>
+                        <div class="contact-item">
+                            <input id="datepicker" class="calendar" type="text" placeholder="ご希望のお日にちを選択ください">
+                        </div>
+                        <div class="contact-item">
+                            <textarea name="contact-form1" id=""
+                                placeholder="お問い合わせ内容(内容によっては返信できかねる場合がございます)"></textarea>
+                        </div>
+                        <div class="contact-button contact-item">
+                            <button>送信</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="ft-upper">
+            <div href="#top" class="ft-title">
+                <a href="#top">
+                    <h2>Hunter.</h2>
+                </a>
+            </div>
+            <div class="ft-address">
+                <p>
+                    Hunter inc. <br>
+                    Tyuuouku Sapporo-si <br>
+                    Hokkaidou, japan 060-0000
+                </p>
+            </div>
+        </div>
+        <div class="ft-lower">
+            <div class="copyright">
+                <p>Copyright Hunter. All Rights Reserved.</p>
+            </div>
+            <nav>
+                <ul class="ft-list">
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">RECRUITING</a></li>
+                    <li><a href="" class="ft-jp">予約サービス利用規約</a></li>
+                    <li><a href="">PRIVACY POLICY</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script>
+
+        // 下方向のスクロールの時のみheader表示
+        $(function () {
+
+            let pos = 0;
+
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() > pos) {
+                    $(".scroll-hd").addClass("open");
+                    $(".scroll-hd").removeClass("close");
+                } else if ($(this).scrollTop() + 15 < pos) {
+                    // +15 マウスを一段階スクロールしてもヘッダーが消えないぎりぎりの値
+                    $(".scroll-hd").removeClass("open");
+                    $(".scroll-hd").addClass("close");
+                }
+                pos = $(this).scrollTop();
+            });
+        });
+
+        let winW = $(window).width();
+        if (winW <= 1024) {
+            $(window).scroll(function () {
+                let winTop = $(window).scrollTop();
+                let winH = $(window).innerHeight();
+                let winW = $(window).width();
+                let halfW = winW / 2;
+                if (winTop >= halfW) {
+                    console.log("HWLLO");
+                    $(".sp-hd svg").css("position", "fixed");
+                } else {
+                    $(".sp-hd svg").css("position", "absolute");
+                }
+            })
+
+        }
+
+        // humburger
+        $(".plate").on("click", function () {
+            $(".open-hd").toggleClass("swich");
+            $(".open-title").toggleClass("swich");
+            $(".open-list").toggleClass("swich");
+            $(".plate1").toggleClass("swich");
+        })
+
+        $(".open-list").on("click", function () {
+            $(".open-hd").removeClass("swich");
+            $(".open-title").removeClass("swich");
+            $(".open-list").removeClass("swich");
+            $(".plate1").removeClass("swich");
+        })
+
+        $(".open-title").on("click", function () {
+            $(".open-hd").removeClass("swich");
+            $(".open-title").removeClass("swich");
+            $(".open-list").removeClass("swich");
+            $(".plate1").removeClass("swich");
+        })
+
+        // datepicker
+        jQuery(function () {
+            jQuery('#datepicker').datepicker({
+            });
+        });
+
+        // 昨日以前選択不可
+        jQuery('#datepicker').datepicker({
+            minDate: 0
+        });
+
+    </script>
+</body>
+
+</html>
